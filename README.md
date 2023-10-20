@@ -13,7 +13,7 @@ Nota: No se incluyen comentarios en el código, ya que no se pueden obtener a tr
 A continuación, se detallan las mejoras y características nuevas de R-Info+:
 
 - ⭐ **CTRL + Z y CTRL + Y:** Hemos implementado la funcionalidad de deshacer y rehacer acciones, aunque es importante tener en cuenta que puede no ser perfecta debido a limitaciones técnicas.
-- ⭐ **Velocidad instantánea:** Ahora puedes ejecutar hasta 200 instrucciones por segundo para lograr una ejecución más rápida.
+- ⭐ **Más veloz:** Ahora puedes ejecutar hasta 200 instrucciones por segundo usando la velocidad "Insta" para lograr una ejecución más rápida.
 - ⭐ **Colores de comillas simples:** Hemos solucionado problemas con la representación de comillas simples para mejorar la legibilidad del código.
 - ⭐ **Optimización de métodos:** Hemos mejorado la eficiencia de los métodos en la aplicación, lo que resulta en un rendimiento significativamente mejorado.
 - ⭐ **Reducción del tamaño:** Hemos logrado una impresionante reducción del tamaño del archivo en un 48.5%, lo que mejora la eficiencia del programa y ahorra espacio de almacenamiento.
