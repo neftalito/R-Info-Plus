@@ -24,6 +24,11 @@ A continuación, se detallan las mejoras y características nuevas de R-Info+:
 
 ¡Disfruta de las mejoras de R-Info+! Te invitamos a explorar el código fuente y a contribuir al proyecto.
 
+## Cambios a Futuro 🚀
+
+- [⌛] 🌑**Modo oscuro:** Estamos trabajando en la implementación del "Modo Oscuro" para una experiencia de usuario más cómoda en condiciones de poca luz y porque se ve mas cool😎.
+- [⌛] 🔄**CTRL+Z y CTRL+Y totalmente funcionales:** Estamos trabajando para arreglar la funcionalidad y que funcione como todos quisieramos.
+
 ## Contribuciones
 Apreciamos tus contribuciones. Si tienes ideas para nuevas características o mejoras, no dudes en abrir un problema o enviar una solicitud de extracción (PR).
 
