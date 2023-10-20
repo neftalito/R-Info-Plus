@@ -1,20 +1,37 @@
- 🚀 R-Info-Upgraded
+# R-Info-Plus 🚀
+
+## Descargo de responsabilidad
+R-Info+ es una versión modificada del programa R-Info utilizado en la cátedra de la Universidad Nacional de La Plata. Ten en cuenta lo siguiente:
+
+- Esta versión cuenta con modificaciones que no se encuentran en el R-Info original, y no asumimos responsabilidad por posibles inconvenientes que puedas experimentar al adaptarte a estas mejoras.
+- Estas modificaciones están destinadas a facilitar el aprendizaje y a mejorar la comodidad durante las pruebas, pero NO está permitido su uso en los parciales.
+- Dado que esta versión se basa en la decompilación del archivo .jar proporcionado por la cátedra, es posible que se hayan introducido errores que no existen en el programa original. Si encuentras algún error, te invitamos a informarlo a través de la pestaña "Issues".
+
+Nota: No se incluyen comentarios en el código, ya que no se pueden obtener a través de la decompilación.
 
 ## Cambios 🛠️
+A continuación, se detallan las mejoras y características nuevas de R-Info+:
 
-Esta versión incluye varias mejoras y características nuevas:
-- 🔄 CTRL + Z y CTRL + Y: Se ha implementado la funcionalidad de deshacer y rehacer (aunque puede no ser perfecta debido a limitaciones técnicas).
-- ⚡ Velocidad instantánea: Ahora puedes ejecutar hasta 200 instrucciones por segundo para una ejecución más rápida.
-- 🎨 Colores de comillas simples: Se han corregido los problemas con la representación de comillas simples para una mejor legibilidad.
-- 🚀 Optimización de métodos: Hemos mejorado la eficiencia de los métodos en la aplicación.
-- 🗑️ Eliminación de imports innecesarios: Se han eliminado los imports que ya no se utilizan.
-- 📝 Añadir compatibilidad con comillas dobles en el informar: Ahora puedes utilizar comillas dobles en la isntrucción "Informar" sin problemas.
-- ⌨️ Añadir compatibilidad con espacios en el informar: Espacios permitidos en la instrucción "Informar" para mayor flexibilidad.
+- ⭐ **CTRL + Z y CTRL + Y:** Hemos implementado la funcionalidad de deshacer y rehacer acciones, aunque es importante tener en cuenta que puede no ser perfecta debido a limitaciones técnicas.
+- ⭐ **Velocidad instantánea:** Ahora puedes ejecutar hasta 200 instrucciones por segundo para lograr una ejecución más rápida.
+- ⭐ **Colores de comillas simples:** Hemos solucionado problemas con la representación de comillas simples para mejorar la legibilidad del código.
+- ⭐ **Optimización de métodos:** Hemos mejorado la eficiencia de los métodos en la aplicación para un mejor rendimiento.
+- ⭐ **Eliminación de imports innecesarios:** Se han eliminado los imports que ya no se utilizan, simplificando así el código.
+- ❗ **Añadir compatibilidad con comillas dobles en el "Informar":** Ahora puedes utilizar comillas dobles en la instrucción "Informar" sin problemas, lo que proporciona mayor flexibilidad.
+- ❗ **Añadir compatibilidad con espacios en el "Informar":** Los espacios son ahora permitidos en la instrucción "Informar" para mayor versatilidad.
 
-¡Disfruta de la programación mejorada con R-Info-Upgraded! Siéntete libre de explorar el código fuente y contribuir al proyecto.
+¡Disfruta de las mejoras de R-Info+! Te invitamos a explorar el código fuente y a contribuir al proyecto.
 
 ## Contribuciones
-¡Apreciamos tu contribución! Si tienes ideas para nuevas características o mejoras, no dudes en abrir un problema o enviar un PR.
+Apreciamos tus contribuciones. Si tienes ideas para nuevas características o mejoras, no dudes en abrir un problema o enviar una solicitud de extracción (PR).
 
 ## Licencia
-Este proyecto está bajo la Licencia Pública General Affero de GNU versión 3.0 (GNU AGPL-3.0). Consulta el archivo [LICENSE](LICENSE) para obtener más detalles sobre los términos de la licencia.
+Este proyecto se distribuye bajo los términos de la Licencia Pública General Affero de GNU versión 3.0 (GNU AGPL-3.0). Para obtener más detalles sobre los términos de la licencia, consulta el archivo [LICENSE](LICENSE).
+
+¡Gracias por utilizar R-Info+!
+
+## Agradecimientos
+
+Este README fue generado con la ayuda de una IA de OpenAI, específicamente, GPT-3.5. Agradecemos a OpenAI por proporcionar la tecnología que nos ayudó a crear este documento.
+
+Si deseas obtener más información sobre OpenAI y sus servicios, puedes visitar su sitio web en [https://openai.com](https://openai.com).
