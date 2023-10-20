@@ -15,7 +15,8 @@ A continuación, se detallan las mejoras y características nuevas de R-Info+:
 - ⭐ **CTRL + Z y CTRL + Y:** Hemos implementado la funcionalidad de deshacer y rehacer acciones, aunque es importante tener en cuenta que puede no ser perfecta debido a limitaciones técnicas.
 - ⭐ **Velocidad instantánea:** Ahora puedes ejecutar hasta 200 instrucciones por segundo para lograr una ejecución más rápida.
 - ⭐ **Colores de comillas simples:** Hemos solucionado problemas con la representación de comillas simples para mejorar la legibilidad del código.
-- ⭐ **Optimización de métodos:** Hemos mejorado la eficiencia de los métodos en la aplicación para un mejor rendimiento.
+- ⭐ **Optimización de métodos:** Hemos mejorado la eficiencia de los métodos en la aplicación, lo que resulta en un rendimiento significativamente mejorado.
+- ⭐ **Reducción del tamaño:** Hemos logrado una impresionante reducción del tamaño del archivo en un 48.5%, lo que mejora la eficiencia del programa y ahorra espacio de almacenamiento.
 - ⭐ **Eliminación de imports innecesarios:** Se han eliminado los imports que ya no se utilizan, simplificando así el código.
 - ❗ **Añadir compatibilidad con comillas dobles en el "Informar":** Ahora puedes utilizar comillas dobles en la instrucción "Informar" sin problemas, lo que proporciona mayor flexibilidad.
 - ❗ **Añadir compatibilidad con espacios en el "Informar":** Los espacios son ahora permitidos en la instrucción "Informar" para mayor versatilidad.
