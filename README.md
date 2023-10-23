@@ -1,5 +1,10 @@
 # R-Info-Plus 🚀
 
+## ¿Qué versión instalo?
+Dependiendo tu versión de Java.
+- ≥Java19: Versión J19
+- ≥Java8 : Versión J8
+
 ## Descargo de responsabilidad
 R-Info+ es una versión modificada del programa R-Info utilizado en la cátedra de la Universidad Nacional de La Plata. Ten en cuenta lo siguiente:
 
