@@ -14,7 +14,7 @@ NOTA: Se marcan con un signo de exclamación "❗" aquellos cambios que generan 
 
 A continuación, se detallan las mejoras y características nuevas de R-Info+:
 - ⭐ **CTRL + Z y CTRL + Y:** Hemos implementado la funcionalidad de deshacer y rehacer acciones, aunque es importante tener en cuenta que puede no ser perfecta debido a limitaciones técnicas.
-- ⭐ **(¡NUEVO!) CTRL+ y CTRL-**: Ahora puedes agrandar o achicar el tamaño de la letra usando la combinación de siempre para un uso más cómodo.
+- ⭐ **(¡NUEVO!) CTRL+ y CTRL- :** Ahora puedes agrandar o achicar el tamaño de la letra usando la combinación de siempre para un uso más cómodo.
 - ⭐ **Más veloz:** Ahora puedes ejecutar hasta 200 instrucciones por segundo usando la velocidad "Insta" para lograr una ejecución más rápida.
 - ⭐ **Colores de comillas simples:** Hemos solucionado problemas con la representación de comillas simples para mejorar la legibilidad del código.
 - ⭐ **Optimización de métodos:** Hemos mejorado la eficiencia de los métodos en la aplicación, lo que resulta en un rendimiento significativamente mejorado.
