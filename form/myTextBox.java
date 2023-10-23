@@ -114,7 +114,7 @@ class myTextBox extends JTextPane implements KeyListener {
                 ex.printStackTrace(); // Manejo de errores si no se puede deshacer
             }
         }
-        if(e.isControlDown() && e.getKeyCode() == 89){ // CTRL + Y
+        if (e.isControlDown() && e.getKeyCode() == 89) { // CTRL + Y
             try {
                 if (undoManager.canRedo()) {
                     undoManager.redo();
@@ -123,7 +123,13 @@ class myTextBox extends JTextPane implements KeyListener {
                 ex.printStackTrace(); // Manejo de errores si no se puede rehacer
             }
         }
-        if (e.isControlDown() && e.getKeyCode() == 86) {
+        if (e.isControlDown() && (e.getKeyCode() == 521 || e.getKeyCode() == 107)) { // CTRL + +
+            this.incFontSize();
+        }
+        if (e.isControlDown() && (e.getKeyCode() == 45 || e.getKeyCode() == 109)) {// CTRL + -
+            this.decFontSize();
+        }
+        if (e.isControlDown() && e.getKeyCode() == 86) { // CTRL + V
             Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
             Transferable t = cb.getContents(this);
             try {
@@ -137,7 +143,8 @@ class myTextBox extends JTextPane implements KeyListener {
                         System.out.println(ss.length);
                         System.out.println(ss[0].length());
 
-                        //Transferable dataOriginal = cb.getContents(null); // Guardamos los datos copiados
+                        // Transferable dataOriginal = cb.getContents(null); // Guardamos los datos
+                        // copiados
 
                         if (ss.length == 1) {
                             System.out.println(" paste : una");
@@ -151,7 +158,8 @@ class myTextBox extends JTextPane implements KeyListener {
                             act = act.replace(fin, "\n");
                             this.setText(act);
                         }
-                        //this.mtp.updateSyntaxHighlighting(); POR QUÉ ESTO HACE QUE NO FUNCIONEN LOS COLORES SI DEBERÍA HACER LO CONTRARIO
+                        // this.mtp.updateSyntaxHighlighting(); POR QUÉ ESTO HACE QUE NO FUNCIONEN LOS
+                        // COLORES SI DEBERÍA HACER LO CONTRARIO
                         e.consume();
                         System.out.println("Consume");
                     } catch (UnsupportedFlavorException ex) {
