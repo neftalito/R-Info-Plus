@@ -57,7 +57,7 @@ public class Configuraciones extends JPanel {
         this.lab5 = new JLabel("Bolsa de Papeles  ");
         this.lab6 = new JLabel("Cantidad:    ");
         this.gbc = new GridBagConstraints();
-        this.limite = 5;
+        this.limite = 6;
         this.jf3.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(final KeyEvent e) {
