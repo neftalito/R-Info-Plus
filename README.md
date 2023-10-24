@@ -24,6 +24,7 @@ A continuación, se detallan las mejoras y características nuevas de R-Info+:
 - ⭐ **Más cantidad de flores y papeles :** Hemos aumentado la cantidad máxima de flores y papeles que se pueden agregar a 999.999 para que puedas explotar al máximo tu código.
 - ⭐ **Colores de comillas simples:** Hemos solucionado problemas con la representación de comillas simples para mejorar la legibilidad del código.
 - ⭐ **Optimización de métodos:** Hemos mejorado la eficiencia de los métodos en la aplicación, lo que resulta en un rendimiento significativamente mejorado.
+- ⭐ **Arreglo de errores:** Arreglamos algunos errores, entre ellos el de pegar código.
 - ⭐ **Reducción del tamaño:** Hemos logrado una impresionante reducción del tamaño del archivo en un 48.5%, lo que mejora la eficiencia del programa y ahorra espacio de almacenamiento.
 - ⭐ **Eliminación de imports innecesarios:** Se han eliminado los imports que ya no se utilizan, simplificando así el código.
 - ❗ **Añadir compatibilidad con comillas dobles en el "Informar":** Ahora puedes utilizar comillas dobles en la instrucción "Informar" sin problemas, lo que proporciona mayor flexibilidad.
