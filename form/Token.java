@@ -85,7 +85,7 @@ public class Token {
     public static final byte COMILLASSIMPLE = 78;
     public static final byte RANDOM = 79;
 
-    //Propios
+    // Propios
     public static final byte COMILLASDOBLES = 80;
     public static final String[] spellings;
 
@@ -93,7 +93,7 @@ public class Token {
         this.kind = kind;
         this.spelling = spelling;
         if (this.kind == 0) {
-            for (byte i = 1; i <= spellings.length-1; ++i) {
+            for (byte i = 1; i <= spellings.length - 1; ++i) {
                 if (this.spelling.equals(Token.spellings[i])) {
                     this.kind = i;
                     break;
