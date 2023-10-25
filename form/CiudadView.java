@@ -116,14 +116,14 @@ public class CiudadView extends JComponent implements MouseListener, MouseWheelL
     }
 
     protected void dibujarCiudad() throws Exception {
-        this.lienzo.setColor(Color.white);
+        this.lienzo.setColor(Color.white); // * Fondo de manzanas
         this.lienzo.fillRect(0, 0, this.getWidth(), this.getHeight());
-        this.lienzo.setColor(Color.black);
+        this.lienzo.setColor(Color.black); // ! No encontré de qué es este color
         this.lienzo.setColor(this.getColorManzana());
         for (int ca = 1; ca <= this.city.getNumCa(); ++ca) {
             for (int av = 1; av <= this.city.getNumAv(); ++av) {
                 if (ca == 1 || av == 100) {
-                    this.lienzo.setColor(Color.WHITE);
+                    this.lienzo.setColor(Color.WHITE); // * Ultimas manzanas de la derecha del todo
                 }
                 this.dibujarManzana(av, ca);
                 this.dibujarEsquina(av, ca);
@@ -134,9 +134,9 @@ public class CiudadView extends JComponent implements MouseListener, MouseWheelL
     }
 
     protected void dibujarCiudadVentanita() throws Exception {
-        this.lienzo.setColor(Color.white);
+        this.lienzo.setColor(Color.white); // * Fondo ciudad miniatura "Ventanita"
         this.lienzo.fillRect(0, 0, this.getWidth(), this.getHeight());
-        this.lienzo.setColor(Color.black);
+        this.lienzo.setColor(Color.black); // * Bordes ciudad miniatura "Ventanita"
         this.lienzo.drawRect(0, this.getBlockSize(),
                 this.city.getNumAv() * this.getBlockSize() * 2 + this.getBlockSize(),
                 this.city.getNumCa() * this.getBlockSize() * 2 + this.getBlockSize());
@@ -144,7 +144,7 @@ public class CiudadView extends JComponent implements MouseListener, MouseWheelL
         for (int ca = 1; ca <= this.city.getNumCa(); ++ca) {
             for (int av = 1; av <= this.city.getNumAv(); ++av) {
                 if (ca == 0 || av == 100) {
-                    this.lienzo.setColor(Color.WHITE);
+                    this.lienzo.setColor(Color.WHITE); // * Ultimas manzanas de la derecha del todo de la "Ventanita"
                 }
                 this.dibujarManzana(av, ca);
                 this.dibujarEsquina(av, ca);
