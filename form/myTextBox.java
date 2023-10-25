@@ -125,9 +125,11 @@ class myTextBox extends JTextPane implements KeyListener {
         }
         if (e.isControlDown() && (e.getKeyCode() == 521 || e.getKeyCode() == 107)) { // CTRL + +
             this.incFontSize();
+            this.mtp.incLinesFontSize();
         }
         if (e.isControlDown() && (e.getKeyCode() == 45 || e.getKeyCode() == 109)) {// CTRL + -
             this.decFontSize();
+            this.mtp.decLinesFontSize();
         }
         if (e.isControlDown() && e.getKeyCode() == 86) { // CTRL + V
             Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();

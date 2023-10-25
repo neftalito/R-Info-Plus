@@ -12,6 +12,7 @@ import javax.swing.JTextArea;
 import javax.swing.event.DocumentListener;
 import javax.swing.JScrollPane;
 
+// Clase con el panel de texto y número de  lineas de código
 class MyTextPane extends JScrollPane implements DocumentListener {
     public myTextBox text;
     private JTextArea lines;
@@ -102,6 +103,19 @@ class MyTextPane extends JScrollPane implements DocumentListener {
             }
             this.lines.setText(t);
             this.lines.setCaretPosition(0);
+        }
+    }
+
+    // Incrementar fuente o disminuir la fuente de los números de linea
+    public void incLinesFontSize() {
+        ++this.tam;
+        this.lines.setFont(new Font("Monospaced", 0, this.tam));
+    }
+
+    public void decLinesFontSize() {
+        if (this.tam > 2) {
+            --this.tam;
+            this.lines.setFont(new Font("Monospaced", 0, this.tam));
         }
     }
 
