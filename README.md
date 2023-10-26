@@ -27,12 +27,13 @@ A continuación, se detallan las mejoras y características nuevas de R-Info+:
 - ⭐ **Arreglo de errores:** Arreglamos algunos errores, entre ellos el de pegar código.
 - ⭐ **Reducción del tamaño:** Hemos logrado una impresionante reducción del tamaño del archivo en un 48.5%, lo que mejora la eficiencia del programa y ahorra espacio de almacenamiento.
 - ⭐ **Eliminación de imports innecesarios:** Se han eliminado los imports que ya no se utilizan, simplificando así el código.
+- ⭐ **Cargar y guardar ciudades:** Ahora podés exportar e importar el "estado" de la ciudad, con sus flores y papeles para poder guardarlo y usarlo cuando quieras. (Gracias a https://github.com/fabriziogirardi/).
 - ❗ **Añadir compatibilidad con comillas dobles en el "Informar":** Ahora puedes utilizar comillas dobles en la instrucción "Informar" sin problemas, lo que proporciona mayor flexibilidad.
 - ❗ **Añadir compatibilidad con espacios en el "Informar":** Los espacios son ahora permitidos en la instrucción "Informar" para mayor versatilidad.
-- ❗ **(¡Nuevo!)Nuevas instrucciones :** Hemos añadido las siguientes instrucciones
-  - "izquierda" : Al fin llegó la tan esperada instrucción para ir a la izquierda.
+- ❗ **(¡Nuevo!)Nuevas instrucciones :** Hemos añadido las siguientes instrucciones:
+  - "izquierda" : Al fin llegó la tan esperada instrucción para girar a la izquierda.
   - "cantFloresBolsa" y "cantFloresPapeles" : Ahora vas a poder usar estas variables en tus "repetir" y "mientras" sin necesidad de depositar y recoger todo.
-- ❗ **(¡Nuevo!)Nuevo operador :** Hemos añadido el operador de módulo. Ej: "5 % 2"
+- ❗ **(¡Nuevo!)Nuevo operador :** Hemos añadido el operador de módulo. Ej: "5 % 2".
 
 [Hacé click acá para ver cómo implementar las nuevas instrucciones y operadores en el R-Info de la cátedra](ImplementacionInstrucciones.md)
 
