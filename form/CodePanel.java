@@ -334,9 +334,8 @@ public class CodePanel extends JPanel{
         if (status == 0) {
             final File f = chooser.getSelectedFile();
             this.path = f.getAbsolutePath();
-            try {
-                final FileReader fin = new FileReader(f);
-                final BufferedReader br = new BufferedReader(fin);
+            try (final FileReader fin = new FileReader(f);
+                 final BufferedReader br = new BufferedReader(fin)) {
                 final char[] buffer = new char[4096];
                 String txt = "";
                 int len;
