@@ -8,7 +8,7 @@ Dependiendo tu versión de Java.
 ## Descargo de responsabilidad
 R-Info+ es una versión modificada del programa R-Info utilizado en la cátedra de la Universidad Nacional de La Plata. Ten en cuenta lo siguiente:
 
-- Esta versión cuenta con modificaciones que no se encuentran en el R-Info original, y no asumimos responsabilidad por posibles inconvenientes que puedas experimentar al adaptarte a estas mejoras.
+- Esta versión cuenta con modificaciones que no se encuentran en el R-Info original, y no asumimos responsabilidad por posibles inconvenientes que puedas experimentar al adaptarte a estos cambios.
 - Estas modificaciones están destinadas a facilitar el aprendizaje y a mejorar la comodidad durante las pruebas, pero NO está permitido su uso en los parciales.
 - Dado que esta versión se basa en la decompilación del archivo .jar proporcionado por la cátedra, es posible que se hayan introducido errores que no existen en el programa original. Si encuentras algún error, te invitamos a informarlo a través de la pestaña "Issues".
 
