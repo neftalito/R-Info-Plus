@@ -29,6 +29,7 @@ import javax.swing.JComboBox;
 import javax.swing.JButton;
 import javax.swing.JToolBar;
 import javax.swing.JPanel;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class CodePanel extends JPanel{
     private JToolBar toolBar;
@@ -46,6 +47,8 @@ public class CodePanel extends JPanel{
     private JButton pauseButton;
     private JButton compileButton;
     private JButton saveAsButton;
+    private JButton loadCityButton;
+    private JButton saveCityButton;
     JTextField NombreRobot;
     Thread thread;
     Thread threadVentana;
@@ -53,6 +56,9 @@ public class CodePanel extends JPanel{
     Runnable exec2;
     Ejecucion exec;
     String path;
+
+    String[] cityCoord;
+    int[][][] cityMap = new int[100][100][2];
 
     public CodePanel(final Ciudad city) throws Exception {
         this.esperarRefresco = MonitorActualizarVentana.getInstance();
@@ -82,6 +88,10 @@ public class CodePanel extends JPanel{
         (this.stopButton = new JButton(icon)).setToolTipText("Parar programa");
         icon = new ImageIcon(this.getClass().getResource("/images/pause.png"));
         (this.pauseButton = new JButton(icon)).setToolTipText("Pausar programa");
+        icon = new ImageIcon(this.getClass().getResource("/images/load_city_small.png"));
+        (this.loadCityButton = new JButton(icon)).setToolTipText("Importar ciudad");
+        icon = new ImageIcon(this.getClass().getResource("/images/load_city_small.png"));
+        (this.saveCityButton = new JButton(icon)).setToolTipText("Exportar ciudad");
         try {
             this.path = new File(".").getCanonicalPath();
         } catch (IOException ex) {
@@ -105,6 +115,26 @@ public class CodePanel extends JPanel{
                 }
             }
         });
+
+        this.loadCityButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(final ActionEvent e) {
+                try {
+                    CodePanel.this.doLoadCityCommand();
+                } catch (IOException ex) {
+                    System.out.println("error en el abrir archivo");
+                    Logger.getLogger(CodePanel.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
+
+        this.saveCityButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(final ActionEvent e) {
+                CodePanel.this.doSaveCityCommand();
+            }
+        });
+
         this.saveAsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
@@ -214,6 +244,9 @@ public class CodePanel extends JPanel{
         this.toolBar.add(this.stepButton);
         this.toolBar.add(this.stopButton);
         this.toolBar.add(this.pauseButton);
+        this.toolBar.addSeparator(new Dimension(20, 10));
+        this.toolBar.add(this.loadCityButton);
+        this.toolBar.add(this.saveCityButton);
         this.toolBar.add(new JPanel());
         this.add(this.toolBar, "North");
         (this.text = new MyTextPane(this.city)).setP(this);
@@ -316,6 +349,92 @@ public class CodePanel extends JPanel{
                 System.out.println("Exception en el doOpenCommand");
             }
         }
+    }
+
+    public void doLoadCityCommand() throws IOException {
+        final JFileChooser chooser = new JFileChooser(this.path);
+        chooser.addChoosableFileFilter(new FileNameExtensionFilter("Mapa de ciudad para R-info", "rcity"));
+        chooser.setAcceptAllFileFilterUsed(false);
+        final int status = chooser.showOpenDialog(this);
+        if (status == 0) {
+            final File f = chooser.getSelectedFile();
+            this.path = f.getAbsolutePath();
+            try {
+                final FileReader fin = new FileReader(f);
+                final BufferedReader br = new BufferedReader(fin);
+                final char[] buffer = new char[4096];
+                String txt = "";
+                int len;
+                while ((len = br.read(buffer, 0, buffer.length)) != -1) {
+                    txt += new String(buffer, 0, len);
+                }
+                txt = txt.replace("\r", "");
+
+                String[] allCoords = txt.split("_");
+
+                for (String coord : allCoords) {
+                    String[] data = coord.split("\\*");
+
+                    String[] c = data[0].split("-");
+                    String[] o = data[1].split("-");
+
+                    // System.out.println("Int c0: " + Integer.parseInt(c[0]));
+                    // System.out.println("Int c1: " + Integer.parseInt(c[1]));
+                    // System.out.println("Int o0: " + Integer.parseInt(o[0]));
+                    // System.out.println("Int o1: " + Integer.parseInt(o[1]));
+                    this.city.ciudad[Integer.parseInt(c[0])][Integer.parseInt(c[1])].setFlores(Integer.parseInt(o[0]));
+                    this.city.ciudad[Integer.parseInt(c[0])][Integer.parseInt(c[1])].setPapeles(Integer.parseInt(o[1]));
+                }
+
+                br.close(); // Añadido
+                this.city.form.jsp.refresh();
+            } catch (Exception exc) {
+                System.out.println("Exception en el doLoadCityCommand");
+                System.out.println(exc.getMessage());
+            }
+        }
+    }
+
+    public void doSaveCityCommand() {
+        StringBuilder data = new StringBuilder();
+        for (int i = 1; i <= 100; i++) {
+            for (int j = 1; j <= 100; j++) {
+                if (this.city.ciudad[i][j].getFlores() > 0 || this.city.ciudad[i][j].getPapeles() > 0) {
+                    data.append(i)
+                            .append("-")
+                            .append(j)
+                            .append("*")
+                            .append(this.city.ciudad[i][j].getFlores())
+                            .append("-")
+                            .append(this.city.ciudad[i][j].getPapeles())
+                            .append("_");
+                }
+            }
+        }
+
+        if (data.length() > 0) {
+            data.deleteCharAt(data.length() - 1);
+
+            final JFileChooser chooser = new JFileChooser(this.path);
+            chooser.addChoosableFileFilter(new FileNameExtensionFilter("Mapa de ciudad para R-info", "rcity"));
+            chooser.setAcceptAllFileFilterUsed(false);
+
+            if (chooser.showSaveDialog(null) == 0) {
+                final File fFileName = chooser.getSelectedFile();
+                Writer out = null;
+                try {
+                    try {
+                        out = new OutputStreamWriter(new FileOutputStream(fFileName.toString().replaceFirst("[.][^.]+$", "") + ".rcity"), "UTF-8");
+                        out.write(data.toString());
+                    } finally {
+                        out.close();
+                    }
+                } catch (Exception ex) {
+                }
+            }
+        }
+
+        // System.out.println(data);
     }
 
     public void doSaveCommand() {
