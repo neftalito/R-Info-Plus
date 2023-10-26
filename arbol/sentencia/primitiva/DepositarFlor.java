@@ -21,7 +21,6 @@ public class DepositarFlor extends Primitiva {
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        final DepositarFlor obj = new DepositarFlor();
-        return obj;
+        return new DepositarFlor();
     }
 }

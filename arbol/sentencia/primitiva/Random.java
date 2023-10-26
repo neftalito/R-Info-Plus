@@ -59,14 +59,13 @@ public class Random extends Primitiva {
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        Random obj = null;
         try {
             final Expresion E11 = (Expresion) this.getE1().clone();
             final Expresion E12 = (Expresion) this.getE2().clone();
-            obj = new Random(this.getI(), this.getDV(), E11, E12);
+            return new Random(this.getI(), this.getDV(), E11, E12);
         } catch (Exception ex) {
             Logger.getLogger(Random.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return obj;
+        return null;
     }
 }

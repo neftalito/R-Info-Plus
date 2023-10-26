@@ -21,7 +21,6 @@ public class TomarPapel extends Primitiva {
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        final TomarPapel obj = new TomarPapel();
-        return obj;
+        return new TomarPapel();
     }
 }

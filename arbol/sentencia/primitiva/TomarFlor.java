@@ -21,7 +21,6 @@ public class TomarFlor extends Primitiva {
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        final TomarFlor obj = new TomarFlor();
-        return obj;
+        return new TomarFlor();
     }
 }

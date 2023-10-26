@@ -22,7 +22,6 @@ public class Derecha extends Primitiva {
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        final Derecha obj = new Derecha();
-        return obj;
+        return new Derecha();
     }
 }

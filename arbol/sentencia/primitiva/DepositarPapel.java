@@ -21,7 +21,6 @@ public class DepositarPapel extends Primitiva {
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        final DepositarPapel obj = new DepositarPapel();
-        return obj;
+        return new DepositarPapel();
     }
 }
