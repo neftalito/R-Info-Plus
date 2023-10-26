@@ -28,7 +28,7 @@ public class Main extends JFrame implements PropertyChangeListener {
     ArrayList<JTextArea> jt;
 
     public Main() {
-        super(" R-Info+ | MOD NO OFICIAL V0.0.1 (update BETA 2.9.5)");
+        super(" R-Info+ | MOD NO OFICIAL V0.0.2 (update BETA 2.9.5)");
         this.monitorCola = MonitorActualizarVentana.crearMonitorActualizarVentana(4);
         this.esquinas = MonitorEsquinas.crearMonitorEsquinas();
         this.cod2 = new JFrame();
