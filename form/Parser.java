@@ -88,11 +88,7 @@ public class Parser {
     }
 
     public boolean isOperando(final Token token) {
-        boolean res = false;
-        if (token.kind == 23 || token.kind == 32 || token.kind == 33) {
-            res = true;
-        }
-        return res;
+        return token.kind == 23 || token.kind == 32 || token.kind == 33;
     }
 
     public boolean isVariableEntorno(final Token token) {
