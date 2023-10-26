@@ -14,7 +14,7 @@ public class Resta extends Operador {
     @Override
     public String resultado(final String Op1) {
         int a = Integer.parseInt(Op1);
-        return String.valueOf(0 - a);
+        return String.valueOf(-a);
     }
 
     @Override
