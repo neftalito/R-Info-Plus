@@ -12,10 +12,7 @@ public class HayFlorEnLaBolsa extends Expresion {
     @Override
     public String getValue(final DeclaracionVariable DV) {
         synchronized (this) {
-            if (this.getRobot().HayFlorEnLaBolsa()) {
-                return "V";
-            }
-            return "F";
+            return this.getRobot().HayFlorEnLaBolsa() ? "V" : "F";
         }
     }
 

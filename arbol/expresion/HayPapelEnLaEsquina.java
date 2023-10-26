@@ -14,10 +14,7 @@ public class HayPapelEnLaEsquina extends Expresion {
         synchronized (this) {
             final int Av = this.getRobot().PosAv();
             final int Ca = this.getRobot().PosCa();
-            if (this.getRobot().getCity().HayPapelEnLaEsquina(Av, Ca)) {
-                return "V";
-            }
-            return "F";
+            return this.getRobot().getCity().HayPapelEnLaEsquina(Av, Ca) ? "V" : "F";
         }
     }
 

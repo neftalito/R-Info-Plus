@@ -11,10 +11,7 @@ public class HayPapelEnLaBolsa extends Expresion {
 
     @Override
     public String getValue(final DeclaracionVariable DV) {
-        if (this.getRobot().HayPapelEnLaBolsa()) {
-            return "V";
-        }
-        return "F";
+        return this.getRobot().HayPapelEnLaBolsa() ? "V" : "F";
     }
 
     @Override
