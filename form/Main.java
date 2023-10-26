@@ -79,6 +79,13 @@ public class Main extends JFrame implements PropertyChangeListener {
     }
 
     public static void main(final String[] args) {
+        // Mostrar alerta de que es un mod e imprimirlo en consola
+        System.out.println(
+                "¡Gracias por usar R-Info+! Recuerda que esto es un mod del original, puede haber fallos y hay instrucciones y operaciones que no son permitidas por la cátedra.\nMás información: https://github.com/neftalito/R-Info-Plus.");
+        JOptionPane.showMessageDialog(null,
+                "¡Gracias por usar R-Info+! Recuerda que esto es un mod del original, puede haber fallos y hay instrucciones y operaciones que no son permitidas por la cátedra.\nMás información: https://github.com/neftalito/R-Info-Plus.",
+                "¡Importante!",
+                JOptionPane.INFORMATION_MESSAGE);
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
