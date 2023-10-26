@@ -59,10 +59,10 @@ public class Datos extends JPanel implements PropertyChangeListener {
         this.lab12 = new JLabel("P ");
         (this.lab13 = new JLabel()).setText("F  ");
         this.lab14 = new JLabel("P ");
-        (this.lab15 = new JLabel()).setText("00");
-        this.lab16 = new JLabel("00");
-        (this.lab17 = new JLabel()).setText("00");
-        this.lab18 = new JLabel("00");
+        (this.lab15 = new JLabel()).setText("0");
+        this.lab16 = new JLabel("0");
+        (this.lab17 = new JLabel()).setText("0");
+        this.lab18 = new JLabel("0");
         (this.estado = new JLabel()).setForeground(this.estado.getForeground());
         this.colorInicial = this.estado.getForeground();
         this.estado.setText("Nuevo  ");

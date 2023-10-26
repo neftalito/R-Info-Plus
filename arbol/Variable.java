@@ -36,7 +36,7 @@ public class Variable extends Expresion {
             } else {
                 this.setT(T);
                 if (this.getT().tipo == 19) {
-                    this.value = "00";
+                    this.value = "0";
                 }
                 if (this.getT().tipo == 20) {
                     this.value = "F";
