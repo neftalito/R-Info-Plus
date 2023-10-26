@@ -32,7 +32,7 @@ A continuación, se detallan las mejoras y características nuevas de R-Info+:
 - ❗ **Añadir compatibilidad con espacios en el "Informar":** Los espacios son ahora permitidos en la instrucción "Informar" para mayor versatilidad.
 - ❗ **(¡Nuevo!) Nuevas instrucciones :** Hemos añadido las siguientes instrucciones:
   - "izquierda" : Al fin llegó la tan esperada instrucción para girar a la izquierda.
-  - "cantFloresBolsa" y "cantFloresPapeles" : Ahora vas a poder usar estas variables en tus "repetir" y "mientras" sin necesidad de depositar y recoger todo.
+  - "cantFloresBolsa" y "cantPapelesBolsa" : Ahora vas a poder usar estas variables en tus "repetir" y "mientras" sin necesidad de depositar y recoger todo.
 - ❗ **(¡Nuevo!) Nuevo operador :** Hemos añadido el operador de módulo. Ej: "5 % 2".
 
 [Hacé click acá para ver cómo implementar las nuevas instrucciones y operadores en el R-Info de la cátedra](ImplementacionInstrucciones.md)
