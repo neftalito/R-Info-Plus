@@ -386,8 +386,8 @@ public class CodePanel extends JPanel{
                         this.city.form.c.conf.add(this.city.form.c.conf.JP, this.city.form.c.conf.gbc);
                         this.city.form.c.conf.JP.repaint();
                     }
-                    parser[0] = new Parser(code, this.city);
-                    prgAST[0] = parser[0].parse();
+                    //parser[0] = new Parser(code, this.city);
+                    //prgAST[0] = parser[0].parse();
                     this.city.robots = new ArrayList<Robot>();
                     this.city.areas = new ArrayList<Area>();
                     this.city.form.c.conf.remove(9);
