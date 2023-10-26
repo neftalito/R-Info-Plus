@@ -21,6 +21,7 @@ import arbol.sentencia.primitiva.DepositarFlor;
 import arbol.sentencia.primitiva.TomarPapel;
 import arbol.sentencia.primitiva.TomarFlor;
 import arbol.sentencia.primitiva.Derecha;
+import arbol.sentencia.primitiva.Izquierda;
 import arbol.sentencia.primitiva.Mover;
 import arbol.sentencia.primitiva.Leer;
 import arbol.sentencia.primitiva.BloquearEsquina;
@@ -643,6 +644,11 @@ public class Parser {
                 senAST = new Random(I3, DV, E6, E7);
                 break;
             }
+            case 84: {
+                senAST = new Izquierda();
+                this.takeIt();
+                break;
+            }
             default: {
                 throw new Exception("Se esperaba una primitiva");
             }
@@ -776,7 +782,8 @@ public class Parser {
             case 75:
             case 76:
             case 77:
-            case 79: {
+            case 79:
+            case 84: {
                 senAST = this.parsePrimitiva(DV);
                 break;
             }

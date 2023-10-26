@@ -90,6 +90,7 @@ public class Token {
     public static final byte MOD = 81;
     public static final byte CANTFLORESBOLSA = 82;
     public static final byte CANTPAPELESBOLSA = 83;
+    public static final byte IZQUIERDA = 84;
 
     public static final String[] spellings;
 
@@ -115,6 +116,6 @@ public class Token {
                 "DEDENT", "sino", "+", "-", "/", "*", "~", "&", "|", "<", ">", "<>", ">=", "<=", "ES", "S", "E", ";",
                 "{", "}", "HayObstaculo", "OP", "robots", "robot", "EnviarMensaje", "RecibirMensaje", "areas", "AreaC",
                 "AreaP", "AreaPC", "AsignarArea", "COMENTARIO", "Leer", "BloquearEsquina", "LiberarEsquina", "'",
-                "Random", "\"", "%", "cantFloresBolsa", "cantPapelesBolsa" };
+                "Random", "\"", "%", "cantFloresBolsa", "cantPapelesBolsa", "izquierda" };
     }
 }

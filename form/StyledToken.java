@@ -127,7 +127,7 @@ class StyledToken {
                 "FIN DE ARCHIVO" };
         primitivas = new String[] { "EnviarMensaje", "RecibirMensaje", "BloquearEsquina", "LiberarEsquina", "Pos",
                 "Informar", "AsignarArea", "Iniciar", "Leer", "Random", "mover", "derecha", "tomarFlor", "tomarPapel",
-                "depositarFlor", "depositarPapel" };
+                "depositarFlor", "depositarPapel", "izquierda" };
         variables = new String[] { "PosAv", "PosCa", "HayFlorEnLaEsquina", "HayFlorEnLaBolsa", "HayPapelEnLaEsquina",
                 "HayPapelEnLaBolsa", "HayObstaculo", "cantFloresBolsa", "cantPapelesBolsa" };
         palabrasClave = new String[] { "comenzar", "variables", "fin", "programa", "procesos", "proceso", "ES", "S",
