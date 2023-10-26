@@ -58,6 +58,7 @@ import arbol.expresion.operador.aritmetico.Suma;
 import arbol.expresion.operador.aritmetico.Resta;
 import arbol.expresion.operador.aritmetico.Multiplicacion;
 import arbol.expresion.operador.aritmetico.Division;
+import arbol.expresion.operador.aritmetico.Modulo;
 import arbol.expresion.operador.Operador;
 import arbol.expresion.HayObstaculo;
 import arbol.expresion.HayPapelEnLaEsquina;
@@ -66,6 +67,8 @@ import arbol.expresion.HayPapelEnLaBolsa;
 import arbol.expresion.HayFlorEnLaBolsa;
 import arbol.expresion.PosCa;
 import arbol.expresion.PosAv;
+import arbol.expresion.CantidadFloresBolsa;
+import arbol.expresion.CantidadPapelesBolsa;
 import arbol.expresion.Expresion;
 
 public class Parser {
@@ -99,7 +102,9 @@ public class Parser {
             case 11:
             case 12:
             case 13:
-            case 63: {
+            case 63:
+            case 82:
+            case 83: {
                 return true;
             }
             default: {
@@ -123,7 +128,8 @@ public class Parser {
             case 53:
             case 54:
             case 55:
-            case 56: {
+            case 56:
+            case 81: {
                 res = true;
                 break;
             }
@@ -156,7 +162,8 @@ public class Parser {
         final Token t = (Token) o;
         if (t.kind == 21 || (this.currentToken.kind == 49 && t.kind == 50)
                 || (this.currentToken.kind == 49 && t.kind == 51)
-                || ((this.currentToken.kind == 48 || this.currentToken.kind == 47) && (t.kind == 45 || t.kind == 46))) {
+                || ((this.currentToken.kind == 48 || this.currentToken.kind == 47 || this.currentToken.kind == 81)
+                        && (t.kind == 45 || t.kind == 46))) {
             res = false;
         }
         return res;
@@ -191,6 +198,14 @@ public class Parser {
             }
             case 63: {
                 expAST = new HayObstaculo();
+                break;
+            }
+            case 82: {
+                expAST = new CantidadFloresBolsa();
+                break;
+            }
+            case 83: {
+                expAST = new CantidadPapelesBolsa();
                 break;
             }
             default: {
@@ -254,6 +269,10 @@ public class Parser {
             }
             case 56: {
                 expAST = new MenorIgual();
+                break;
+            }
+            case 81: {
+                expAST = new Modulo();
                 break;
             }
             default: {
@@ -399,40 +418,36 @@ public class Parser {
 
     private Invocacion parseInformar(final DeclaracionVariable DV) throws Exception {
         final ArrayList<Expresion> E = new ArrayList<Expresion>();
-        Expresion exp = null;
-        String str = "";
+        String mensaje = "";
+
         this.takeIt();
         this.take((byte) 21);
 
         if (this.currentToken.kind == 78 || this.currentToken.kind == 80) {
-            str = " ";
             this.takeIt();
-            str = this.currentToken.spelling;
+            mensaje += this.currentToken.spelling;
             this.take((byte) 0);
-            if(this.currentToken.kind == 78){
-                while(this.currentToken.kind == 0){
-                    str += " " + this.currentToken.spelling;
-                    this.takeIt(); // Para tener espacios en los informar
-                }
-                this.take((byte) 78);
-            }else{
-                while(this.currentToken.kind == 0){
-                    str += " " + this.currentToken.spelling;
-                    this.takeIt(); // Para tener espacios en los informar
-                }
-                this.take((byte) 80);
+
+            while (currentToken.kind == 0) {
+                mensaje += " " + currentToken.spelling;
+                takeIt(); // Para tener espacios en los informar
             }
+
+            this.take((byte) (currentToken.kind == 78 ? 78 : 80));
             this.take((byte) 24);
         }
         do {
-            exp = this.parseExpresion(DV);
+            Expresion exp = this.parseExpresion(DV);
             E.add(exp);
+
             if (this.currentToken.kind == 24) {
                 this.takeIt();
             }
         } while (this.currentToken.kind != 22);
+
         this.take((byte) 22);
-        return new Invocacion(new Informar(DV, str), E, DV);
+
+        return new Invocacion(new Informar(DV, mensaje), E, DV);
     }
 
     public Invocacion parsePos(final DeclaracionVariable DV) throws Exception {
@@ -665,6 +680,16 @@ public class Parser {
             }
             case 11: {
                 senAST = new HayFlorEnLaBolsa();
+                this.takeIt();
+                break;
+            }
+            case 82: {
+                senAST = new CantidadFloresBolsa();
+                this.takeIt();
+                break;
+            }
+            case 83: {
+                senAST = new CantidadPapelesBolsa();
                 this.takeIt();
                 break;
             }

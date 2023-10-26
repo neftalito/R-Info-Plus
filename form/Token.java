@@ -87,6 +87,10 @@ public class Token {
 
     // Propios
     public static final byte COMILLASDOBLES = 80;
+    public static final byte MOD = 81;
+    public static final byte CANTFLORESBOLSA = 82;
+    public static final byte CANTPAPELESBOLSA = 83;
+
     public static final String[] spellings;
 
     public Token(final byte kind, final String spelling) {
@@ -111,6 +115,6 @@ public class Token {
                 "DEDENT", "sino", "+", "-", "/", "*", "~", "&", "|", "<", ">", "<>", ">=", "<=", "ES", "S", "E", ";",
                 "{", "}", "HayObstaculo", "OP", "robots", "robot", "EnviarMensaje", "RecibirMensaje", "areas", "AreaC",
                 "AreaP", "AreaPC", "AsignarArea", "COMENTARIO", "Leer", "BloquearEsquina", "LiberarEsquina", "'",
-                "Random", "\"" };
+                "Random", "\"", "%", "cantFloresBolsa", "cantPapelesBolsa" };
     }
 }

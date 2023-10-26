@@ -145,6 +145,10 @@ class Scanner {
                 this.takeIt();
                 return 51;
             }
+            if (this.currentChar == '%') {
+                this.takeIt();
+                return 81;
+            }
             if (this.currentChar == '=') {
                 this.takeIt();
                 return 30;
@@ -260,5 +264,7 @@ class Scanner {
         return cc == '\'';
     }
 
-    private boolean isComillaDoble(final char cc){ return cc == '"';}
+    private boolean isComillaDoble(final char cc) {
+        return cc == '"';
+    }
 }

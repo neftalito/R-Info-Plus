@@ -107,7 +107,8 @@ class StyledScan {
                 case '&':
                 case '|':
                 case '=':
-                case ';': {
+                case ';':
+                case '%': {
                     kind = StyledToken.OPERADOR;
                     break;
                 }

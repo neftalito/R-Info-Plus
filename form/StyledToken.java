@@ -129,7 +129,7 @@ class StyledToken {
                 "Informar", "AsignarArea", "Iniciar", "Leer", "Random", "mover", "derecha", "tomarFlor", "tomarPapel",
                 "depositarFlor", "depositarPapel" };
         variables = new String[] { "PosAv", "PosCa", "HayFlorEnLaEsquina", "HayFlorEnLaBolsa", "HayPapelEnLaEsquina",
-                "HayPapelEnLaBolsa", "HayObstaculo" };
+                "HayPapelEnLaBolsa", "HayObstaculo", "cantFloresBolsa", "cantPapelesBolsa" };
         palabrasClave = new String[] { "comenzar", "variables", "fin", "programa", "procesos", "proceso", "ES", "S",
                 "E", "areas", "robots", "robot" };
         areas = new String[] { "AreaP", "AreaC", "AreaPC" };
