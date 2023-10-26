@@ -34,6 +34,8 @@ A continuación, se detallan las mejoras y características nuevas de R-Info+:
   - "cantFloresBolsa" y "cantFloresPapeles" : Ahora vas a poder usar estas variables en tus "repetir" y "mientras" sin necesidad de depositar y recoger todo.
 - ❗ **(¡Nuevo!)Nuevo operador :** Hemos añadido el operador de módulo. Ej: "5 % 2"
 
+[Hacé click acá para ver cómo implementar las nuevas instrucciones y operadores en el R-Info de la cátedra](ImplementacionInstrucciones.md)
+
 ¡Disfruta de las mejoras de R-Info+! Te invitamos a explorar el código fuente y a contribuir al proyecto.
 
 ## Cambios a Futuro 🚀
