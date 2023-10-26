@@ -4,16 +4,13 @@ package arbol.expresion.operador.relacional;
 import arbol.expresion.operador.Operador;
 
 public class Distinto extends Operador {
-    String c;
-
     @Override
     public String resultado(final String Op1, final String Op2) {
-        if (Op1.equals(Op2)) {
-            this.c = "F";
-        } else {
-            this.c = "V";
-        }
-        return this.c;
+        return (Op1.equals(Op2)) ? "F" : "V";
+        /*
+         * Podría ser tambien
+         * return (!Op1.equals(Op2)) ? "V" : "F";
+         */
     }
 
     @Override
