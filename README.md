@@ -19,7 +19,7 @@ NOTA: Se marcan con un signo de exclamación "❗" aquellos cambios que generan 
 
 A continuación, se detallan las mejoras y características nuevas de R-Info+:
 - ⭐ **CTRL + Z y CTRL + Y:** Hemos implementado la funcionalidad de deshacer y rehacer acciones, aunque es importante tener en cuenta que puede no ser perfecta debido a limitaciones técnicas.
-- ⭐ **(¡NUEVO!) CTRL+ y CTRL- :** Ahora puedes agrandar o achicar el tamaño de la letra usando la combinación de siempre para un uso más cómodo.
+- ⭐ **CTRL+ y CTRL- :** Ahora puedes agrandar o achicar el tamaño de la letra usando la combinación de siempre para un uso más cómodo.
 - ⭐ **Más veloz:** Ahora puedes ejecutar hasta 200 instrucciones por segundo usando la velocidad "Insta" para lograr una ejecución más rápida.
 - ⭐ **Más cantidad de flores y papeles:** Hemos aumentado la cantidad máxima de flores y papeles que se pueden agregar a 999.999 para que puedas explotar al máximo tu código.
 - ⭐ **Colores de comillas simples:** Hemos solucionado problemas con la representación de comillas simples para mejorar la legibilidad del código.
@@ -29,6 +29,10 @@ A continuación, se detallan las mejoras y características nuevas de R-Info+:
 - ⭐ **Eliminación de imports innecesarios:** Se han eliminado los imports que ya no se utilizan, simplificando así el código.
 - ❗ **Añadir compatibilidad con comillas dobles en el "Informar":** Ahora puedes utilizar comillas dobles en la instrucción "Informar" sin problemas, lo que proporciona mayor flexibilidad.
 - ❗ **Añadir compatibilidad con espacios en el "Informar":** Los espacios son ahora permitidos en la instrucción "Informar" para mayor versatilidad.
+- ❗ **(¡Nuevo!)Nuevas instrucciones :** Hemos añadido las siguientes instrucciones
+  - "izquierda" : Al fin llegó la tan esperada instrucción para ir a la izquierda.
+  - "cantFloresBolsa" y "cantFloresPapeles" : Ahora vas a poder usar estas variables en tus "repetir" y "mientras" sin necesidad de depositar y recoger todo.
+- ❗ **(¡Nuevo!)Nuevo operador :** Hemos añadido el operador de módulo. Ej: "5 % 2"
 
 ¡Disfruta de las mejoras de R-Info+! Te invitamos a explorar el código fuente y a contribuir al proyecto.
 
