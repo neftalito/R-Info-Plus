@@ -471,6 +471,29 @@ public class Robot {
         }
     }
 
+    public void izquierda() {
+        switch (this.getDireccion()) {
+            case 0: {
+                this.setDireccion(90);
+                break;
+            }
+            case 270: {
+                this.setDireccion(0);
+                break;
+            }
+            case 180: {
+                this.setDireccion(270);
+                break;
+            }
+            case 90: {
+                this.setDireccion(180);
+                break;
+            }
+        }
+        this.esperarRefresco.esperar(this.id);
+        this.getCity().form.jsp.refresh();
+    }
+
     public void derecha() {
         switch (this.getDireccion()) {
             case 0: {
