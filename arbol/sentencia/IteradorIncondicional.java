@@ -28,9 +28,14 @@ public class IteradorIncondicional extends Sentencia {
 
     @Override
     public void ejecutar() throws Exception {
-        int c = 0;
         this.E.setRobot(this.getRobot());
-        for (c = 0; c < Integer.parseInt(this.E.getValue(this.getDV())); ++c) {
+
+        // Antes hacía esto por cada vez, provocando que el repetir(cantFloresBolsa) o
+        // repetir(cantFloresPapeles) y depositando, cambie el valor total y termine
+        // antes de finalizar la ejecución
+        int veces = Integer.parseInt(this.E.getValue(this.getDV()));
+
+        for (int c = 0; c < veces; c++) {
             for (final Sentencia single : this.S) {
                 single.setRobot(this.getRobot());
                 single.ejecutar();
