@@ -1071,10 +1071,11 @@ public class Parser {
             final int x2 = Integer.valueOf(E.get(1).getValue(null));
             final int x3 = Integer.valueOf(E.get(2).getValue(null));
             final int x4 = Integer.valueOf(E.get(3).getValue(null));
-            if (x3 < x1 || x4 < x2 || x1 < 1 || x1 > 100 || x2 < 1 || x1 > 100 || x3 < 1 || x1 > 100 || x4 < 1
-                    || x1 > 100) {
+
+            if (x1 < 1 || x1 > 100 || x2 < 1 || x2 > 100 || x3 < 1 || x3 > 100 || x4 < 1 || x4 > 100) {
                 throw new Exception("valores no validos para el \u00e1rea");
             }
+
             final String s = tipoArea;
             Area area = null;
             switch (s) {
