@@ -8,8 +8,8 @@ public class AsignarArea extends Primitiva {
     Robot r;
     Area a;
 
-    public AsignarArea(final Robot robo, final Area area) {
-        this.r = robo;
+    public AsignarArea(final Robot robot, final Area area) {
+        this.r = robot;
         this.a = area;
     }
 
