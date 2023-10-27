@@ -2,6 +2,7 @@
 ```
 proceso cantFloresBolsa(ES resultado : numero)
     comenzar
+        resultado := 0
         mientras(HayFlorEnLaBolsa)
             depositarFlor
             resultado := resultado + 1
@@ -14,6 +15,7 @@ proceso cantFloresBolsa(ES resultado : numero)
 ```
 proceso cantPapelesBolsa(ES resultado : numero)
     comenzar
+        resultado := 0
         mientras(HayPapelEnLaBolsa)
             depositarPapel
             resultado := resultado + 1
